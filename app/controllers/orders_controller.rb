@@ -8,6 +8,10 @@ class OrdersController < ApplicationController
     @order = Order.new(params[:order])
     @order = build_order(@order)
     if @order.save_with_payment
+
+      OrderMailer.admin(@order).deliver
+      OrderMailer.customer(@order).deliver
+
     	basket.clear
     	flash[:success] = "You have placed an order"
     	#stops order being submitted twice

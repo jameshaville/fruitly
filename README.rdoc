@@ -14,4 +14,14 @@ rails generate active_admin:resource Product
 rails generate active_admin:resource Order
 if make a mistake with paperclip...
 rake paperclip:refresh:thumbnails CLASS=Product
-unknown-68:a8:6d:29:0d:60-2:fruitly jhaville$ heroku run rake db:migrate
+push to heroku
+heroku run rake db:migrate
+rails generate mailer OrderMailer customer admin
+heroku addons:add sendgrid - for email
+
+buy an ssl certificate
+adding ssl railscast or gandi guide (generating csr)
+create an ssl certificate
+common name - where domain goes
+add to gandi
+heroku ssl follow instruction
