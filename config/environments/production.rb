@@ -1,5 +1,5 @@
-Stripe.api_key = "sk_test_TMtIMNhbKSJHJViciihvDzeG"
-STRIPE_PUBLIC_KEY = "pk_test_91tpQEqMvJS1HPV3YmjdXJMc"
+Stripe.api_key = "sk_live_NT2vVVMc7bC7QSedbe9k85e9"
+STRIPE_PUBLIC_KEY = "pk_live_977uhZzApx58VySSE27ZSp79"
 
 Fruitly::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
@@ -31,7 +31,7 @@ Fruitly::Application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
+  config.force_ssl = true
 
   # See everything in the log (default is :info)
   # config.log_level = :debug
