@@ -14,3 +14,4 @@ rails generate active_admin:resource Product
 rails generate active_admin:resource Order
 if make a mistake with paperclip...
 rake paperclip:refresh:thumbnails CLASS=Product
+unknown-68:a8:6d:29:0d:60-2:fruitly jhaville$ heroku run rake db:migrate

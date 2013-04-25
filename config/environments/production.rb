@@ -1,3 +1,6 @@
+Stripe.api_key = "sk_test_TMtIMNhbKSJHJViciihvDzeG"
+STRIPE_PUBLIC_KEY = "pk_test_91tpQEqMvJS1HPV3YmjdXJMc"
+
 Fruitly::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -64,4 +67,8 @@ Fruitly::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  # do not initialise my assests
+  config.assets.initialize_on_precompile = false
+
+  config.assets.precompile += ['active_admin.js', 'active_admin.css','active_admin/print.css']
 end
