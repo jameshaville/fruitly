@@ -1,0 +1,27 @@
+ <div class="product">
+  	
+  	<div class="image-wrap">
+  	  <%= link_to product_path(product) do %>
+  	  <%= image_tag product.image(:medium) %>
+  	  <% end %>
+  	</div>
+  	<div class="caption">
+  	  <!-- if collection with partial than partial name must equal <name>.id below -->
+  	  <% if basket.include?(product.id) %>
+        <%= link_to "Remove", product_basket_path(product), 
+        method: :delete, class:"button" %>
+      <% else %>
+        <%= link_to "Add", product_basket_path(product), 
+        method: :post, class:"button" %>
+      <% end %>
+  	  
+  	  <div class="meta">
+  	    <h2><%= link_to product.title, product_path(product) %></h2>
+   	    <p><%= product.short_description %></p>
+   	    
+   	    <div class="money">
+   	    	<span><%= quid product.price_in_pence %></span>
+   	    </div>
+  	  </div>
+    </div>
+</div>

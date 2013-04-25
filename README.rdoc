@@ -1,0 +1,16 @@
+rails new fruitly
+rails generate model Product title:string short_description:string description:text price_in_pence:integer is_live:boolean stock_remaining:integer
+rails generate model Order first_name:string last_name:string email:string address:text postcode:string stripe_customer_token:string stripe_card_token:string
+rails generate model OrderProduct order_id:integer product_id:integer quantity:integer price_in_pence:integer
+rake db:migrate
+rails generate controller products index show
+rails generate controller orders new show
+rails generate controller baskets
+rails generate paperclip product image
+rake db:migrate
+rails generate active_admin:install
+rake db:migrate
+rails generate active_admin:resource Product
+rails generate active_admin:resource Order
+if make a mistake with paperclip...
+rake paperclip:refresh:thumbnails CLASS=Product

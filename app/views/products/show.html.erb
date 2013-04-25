@@ -1,0 +1,29 @@
+<div id="product-content">
+	<div id="product-photo">
+		<%= link_to product_path(@product) do %>
+		  <%= image_tag @product.image(:large) %>
+		<% end %>
+	</div>
+
+	<ul id="product-details">
+		<li id="product-title">
+		  <h1><%= @product.title %></h1>
+		</li>
+		<li id="product-price">
+		  <%= quid @product.price_in_pence %>
+		</li>
+		<li id="product-add">
+		  <% if basket.include?(@product.id) %>
+		    <%= link_to "Remove", product_basket_path(@product, back: "product"),
+		    method: :delete, class: "button" %>
+		    <% else %>
+		    <%= link_to "Add", product_basket_path(@product, back: "product"),
+		    method: :post, class: "button" %>
+		    <% end %>
+		</li>
+	</ul>
+	<div id="description">
+	  <h2> Description </h2>
+	  <%= md @product.description %>
+	</div>
+ </div>

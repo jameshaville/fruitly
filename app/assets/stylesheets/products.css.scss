@@ -1,0 +1,87 @@
+#products {
+	margin: 40px 0;
+	padding: 0;
+	overflow: hidden;
+
+	.product {
+		width: 260px;
+		margin-right: 60px;
+		float: left;
+		list-style-type: none;
+    height: 460px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+		.img-wrap {
+			height: 260px;
+			overflow: hidden;
+		}
+
+		img {
+			width: 100%;
+			display: block;
+		}
+
+		&.last {
+			margin-right: 0;
+		}
+
+		h2 {
+			font-weight: 700;
+			font-size: 17px;
+		}
+
+		.money {
+			margin-top: 6px;
+			font-size: 14px;
+			color: #a9aaaa;
+			font-family: Georgia, Utopia, 'Times New Roman', Times, serif;
+			font-style: italic;
+		}
+	}
+}
+
+#product-content {
+	margin: 40px 0;
+	overflow: hidden;
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	#product-photo {
+		width: 440px;
+		margin-right: 60px;
+		float: left;
+
+		img {
+			display: block;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	#product-price {
+		margin-bottom: 40px;
+		color: #a9aaaa;
+		font-size: 35px;
+		font-family: Georgia, Utopia, 'Times New Roman', Times, serif;
+	}
+
+	.button {
+		float: left;
+	}
+
+	form {
+		width: 400px;
+		float: right;
+	}
+
+	#description {
+		clear: both;
+	}
+}

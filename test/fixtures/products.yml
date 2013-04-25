@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  short_description: MyString
+  description: MyText
+  price_in_pence: 1
+  is_live: false
+  stock_remaining: 1
+
+two:
+  title: MyString
+  short_description: MyString
+  description: MyText
+  price_in_pence: 1
+  is_live: false
+  stock_remaining: 1

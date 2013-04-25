@@ -1,0 +1,186 @@
+* {
+	-webkit-font-smoothing: antialiased;
+}
+
+::selection {
+	background: #9abcca;
+	color: #fff;
+	text-shadow: none;
+}
+
+body {
+	color: #2b4149;
+	font-family: 'PT Sans', sans-serif;
+}
+
+a {
+	color: #677e87;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.container {
+	width: 900px;
+	margin: 0 auto;
+}
+
+header {
+	padding-bottom: 40px;
+	border-bottom: 1px solid #EEE;
+	overflow: hidden;
+
+	.top {
+		overflow: hidden;
+		padding: 20px 0;
+		margin-bottom: 40px;
+		border-bottom: 1px solid #EEE;
+		font-size: 13px;
+		color: #a9aaaa;
+		font-family: Georgia, Utopia, 'Times New Roman', Times, serif;
+		font-style: italic;
+
+		a {
+			color: #a9aaaa;
+			text-decoration: underline;
+		}
+	}
+
+	.account {
+		width: 50%;
+		float: left;
+	}
+
+	.cart {
+		width: 50%;
+		float: right;
+		text-align: right;
+	}
+
+	h1 {
+		margin: 0;
+		float: left;
+		line-height: 30px;
+	}
+
+	.nav {
+		margin: 0;
+		padding: 0;
+		float: right;
+		line-height: 30px;
+
+		li {
+			display: inline;
+			margin-left: 30px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+form {
+	overflow: hidden;
+	padding: 40px 0;
+
+	div.input {
+		padding: 20px 0;
+
+		label {
+			min-width: 120px;
+			display: inline-block;
+		}
+	}
+
+	input[type="email"],
+	input[type="text"],
+  textarea {
+		border: 1px solid #CCC;
+		border-radius: 3px;
+		padding: 4px;
+	}
+
+  textarea {
+    width: 60%;
+    height: 120px;
+  }
+}
+
+input[type="submit"],
+.button {
+	padding: 7px 12px 9px;
+	background-color: #677e87;
+	text-align: center;
+	display: block;
+	float: right;
+	font-weight: 700;
+	color: #ffffff;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 15px;
+	font-size: 14px;
+	border-radius: 3px;
+	border: none;
+
+	&:hover {
+		text-decoration: none;
+		background-color: #333333;
+	}
+}
+
+input[type="submit"] {
+  float: left;
+  margin-left: 120px;
+}
+
+footer {
+	border-top: 1px solid #EEE;
+	padding: 30px 0;
+	color: #a9aaaa;
+	font-size: 13px;
+}
+
+table {
+  width: 100%;
+
+  td {
+    vertical-align: middle;
+  }
+
+  td.image {
+    width: 120px;
+  }
+
+  td.price {
+    width: 120px;
+    text-align: right;
+  }
+
+  td.remove {
+    width: 120px;
+  }
+
+  img {
+    width: 80px;
+  }
+
+  tr.total {
+    td {
+      border-top: 5px solid #EEE;
+      padding-top: 30px;
+      font-weight: bold;
+    }
+  }
+}
+
+#order {
+  text-align: center;
+  padding: 50px 0;
+
+  .button {
+    float: none;
+    display: inline-block;
+  }
+}

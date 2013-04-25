@@ -1,0 +1,38 @@
+<h1>New order</h1>
+<table>
+  <% @order.order_products.each do |order_product| %>
+    <tr>
+      <!-- delegate method in order_product.rb allows removal of .product -->
+      <!--<td><%= image_tag order_product.product.image(:small)%></td>-->
+      <td><%= image_tag order_product.image(:small)%></td>
+      <td><%= order_product.title %></td>
+      <td><%= quid order_product.price_in_pence %></td>
+      <td><%= link_to "Remove", 
+      		  product_basket_path(order_product.product_id, back: "order"),
+              method: :delete %>
+  	  </td>
+    </tr>
+  <% end %>
+    <tr>
+      <td colspan="2"> Total price </td>
+      <td><%= quid @order.total_price %></td>
+    </tr>
+</table>
+<%= simple_form_for @order do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :address %>
+  <%= f.input :postcode %>
+  <%= f.input :email %>
+
+  <!-- Add Stripe card details below -->
+  <%= f.input :stripe_card_token, as: :hidden %>
+
+  <%= text_field_tag :card_number %>
+  <%= text_field_tag :cvc_number %>
+  <%= select_month nil, {add_month_numbers: true}, {id: "card_month"} %>
+  <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year + 15},{id: "card_year"} %>
+
+
+  <%= f.button :submit, "Place order" %>  
+<% end %>

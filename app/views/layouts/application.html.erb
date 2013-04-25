@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fruitly</title>
+
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <script src="https://js.stripe.com/v2/"></script>
+
+  <%= javascript_include_tag "application" %>
+  <meta name="stripe-public-key" value="<%= STRIPE_PUBLIC_KEY %>" />
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <section class="container">
+    <header>
+      <nav class="top">
+        <div class="cart">
+          <%= pluralize basket.size, "item" %>
+          &nbsp;&bull;&nbsp;
+          <%= link_to "Checkout", new_order_path %>
+        </div>
+      </nav>
+      <h1><%= link_to "Fruit.ly", root_path %></h1>
+      <ul class="nav">
+        <li><a>About</a></li>
+        <li><a>Blog</a></li>
+        <li><a>FAQ</a></li>
+        <li><a>Contact</a></li>
+      </ul>
+    </header>
+    <% if flash[:success].present? %>
+      <div style="background-color:green;"><%= flash[:success] %></div>
+    <% end %>
+    <div id="main">
+     <%= yield %>
+    </div>
+    <footer>
+      <p>&copy; 2013 Fruit.ly</p>
+    </footer>
+</section>
+</body>
+</html>
