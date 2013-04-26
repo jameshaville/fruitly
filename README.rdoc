@@ -25,3 +25,8 @@ create an ssl certificate
 common name - where domain goes
 add to gandi
 heroku ssl follow instruction
+
+aws
+aws-management console -> s3 -> create bucket
+
+security credentials

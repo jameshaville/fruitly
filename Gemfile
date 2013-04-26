@@ -20,6 +20,7 @@ end
 gem 'simple_form'
 gem 'stripe'
 gem 'paperclip'
+gem 'aws-sdk'
 gem 'activeadmin'
 gem 'kaminari'
 gem 'rdiscount'

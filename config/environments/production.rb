@@ -1,3 +1,4 @@
+#live stripe keys here for payment
 Stripe.api_key = "sk_test_TMtIMNhbKSJHJViciihvDzeG"
 STRIPE_PUBLIC_KEY = "pk_test_91tpQEqMvJS1HPV3YmjdXJMc"
 #Stripe.api_key = "sk_live_NT2vVVMc7bC7QSedbe9k85e9"
@@ -73,4 +74,13 @@ Fruitly::Application.configure do
   config.assets.initialize_on_precompile = false
 
   config.assets.precompile += ['active_admin.js', 'active_admin.css','active_admin/print.css']
+
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials:{
+      bucket: "fruitly",
+      access_key_id: "AKIAIATELX552HEMGMGQ",
+      secret_access_key: "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"
+    }
+  }
 end
